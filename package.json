@@ -1,6 +1,6 @@
 {
   "name": "simple-memory-retention-tracer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Finds closures holding an object and shows the scope chain to each retainer.",
   "type": "module",
   "main": "src/index.js",
