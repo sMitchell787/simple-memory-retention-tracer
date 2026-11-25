@@ -43,3 +43,10 @@ Identity is by object reference, not by structural equality. Two distinct empty 
 - `clear()` — removes all records for all objects.
 
 All methods throw `TypeError` for invalid arguments: `object` must be a non-null object, `closure` must be a function, and `scopePath` must be an array of strings.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
